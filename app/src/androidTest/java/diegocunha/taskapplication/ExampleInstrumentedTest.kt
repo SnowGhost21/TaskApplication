@@ -1,4 +1,4 @@
-package diegocunhai.taskapplication
+package diegocunha.taskapplication
 
 import androidx.test.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4

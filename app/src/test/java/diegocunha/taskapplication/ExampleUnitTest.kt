@@ -1,4 +1,4 @@
-package diegocunhai.taskapplication
+package diegocunha.taskapplication
 
 import org.junit.Test
 

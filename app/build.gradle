@@ -16,14 +16,14 @@ android {
 
     compileSdkVersion 28
     defaultConfig {
-        applicationId "diegocunhai.taskapplication"
+        applicationId "diegocunha.taskapplication"
         minSdkVersion 19
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
-        buildConfigField "String", "SERVER_URL", "\"https://dev.4all.com:3003/\""
+        buildConfigField "String", "SERVER_URL", "\"http://dev.4all.com:3003/\""
     }
     dataBinding {
         enabled true
