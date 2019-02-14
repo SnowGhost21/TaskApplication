@@ -1,6 +1,7 @@
 package diegocunha.taskapplication.view.home
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,9 +29,18 @@ class HomeFragment : Fragment() {
         val adapter = TasksAdapter()
         binding.tasksRecyclerView.adapter = adapter
 
+        adapter.onTaskClicked.observe(this, Observer {  })
 
         viewModel.tasks.observe(this, Observer {
             it?.let { tasks -> adapter.setItems(tasks) }
+        })
+
+        viewModel.isLoading.observe(this, Observer {
+            Log.e("Loading", it.toString())
+        })
+
+        viewModel.error.observe(this, Observer {
+            Log.e("Error", it.toString())
         })
 
         return binding.root

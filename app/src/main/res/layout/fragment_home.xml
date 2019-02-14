@@ -25,12 +25,6 @@
 			app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
 			tools:listitem="@layout/task_item" />
 		
-		<androidx.constraintlayout.widget.Group
-			visibleOrGone="@{!viewModel.error}"
-			android:layout_width="wrap_content"
-			android:layout_height="wrap_content"
-			app:constraint_referenced_ids="tasksRecyclerView" />
-		
 		<ProgressBar
 			visibleOrGone="@{viewModel.isLoading}"
 			android:layout_width="wrap_content"

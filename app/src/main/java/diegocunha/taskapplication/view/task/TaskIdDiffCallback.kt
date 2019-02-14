@@ -15,7 +15,7 @@ class TaskIdDiffCallback(private val oldList: List<String>, private val newList:
     }
 
     override fun getNewListSize(): Int {
-        return newListSize.sign
+        return newList.size
     }
 
     override fun areContentsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
