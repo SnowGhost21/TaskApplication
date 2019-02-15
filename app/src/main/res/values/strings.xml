@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">TaskApplication</string>
-    <string name="home_title">My Tasks</string>
+    <string name="home_title">Serviços</string>
     <string name="error_message">Error at request, try again later</string>
 </resources>

@@ -7,5 +7,17 @@
     <fragment
             android:id="@+id/homeFragment"
             android:name="diegocunha.taskapplication.view.home.HomeFragment"
-            android:label="HomeFragment"/>
+            android:label="HomeFragment">
+        <action
+            android:id="@+id/action_homeFragment_to_taskDetailFragment"
+            app:destination="@id/taskDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/taskDetailFragment"
+        android:name="diegocunha.taskapplication.view.detail.TaskDetailFragment"
+        android:label="TaskDetailFragment" >
+        <argument
+            android:name="taskId"
+            app:argType="string" />
+    </fragment>
 </navigation>

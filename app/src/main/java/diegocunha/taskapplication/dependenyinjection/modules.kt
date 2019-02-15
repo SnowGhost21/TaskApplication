@@ -5,6 +5,7 @@ import diegocunha.taskapplication.BuildConfig
 import diegocunha.taskapplication.model.repository.TaskRepository
 import diegocunha.taskapplication.model.repository.retrofit.RetrofitTaskRepository
 import diegocunha.taskapplication.model.repository.retrofit.TaskApi
+import diegocunha.taskapplication.view.detail.TaskDetailViewModel
 import diegocunha.taskapplication.view.home.HomeViewModel
 import io.reactivex.schedulers.Schedulers
 import okhttp3.OkHttpClient
@@ -40,6 +41,8 @@ val appModule = module {
         val retrofit: Retrofit = get()
         retrofit.create(TaskApi::class.java)
     }
+
+    factory { TaskDetailViewModel.Factory(get()) }
 
     single { RetrofitTaskRepository(get()) as TaskRepository }
 

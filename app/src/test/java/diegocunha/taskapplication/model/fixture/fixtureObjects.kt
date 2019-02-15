@@ -24,8 +24,8 @@ val createTask = Task(
         "title",
         "description",
         "address",
-        0L,
-        0L,
+        0.0,
+        0.0,
         createListTaskComment
 )
 
