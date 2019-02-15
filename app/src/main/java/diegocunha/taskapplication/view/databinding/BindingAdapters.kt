@@ -24,12 +24,3 @@ fun loadImage(view: ImageView, url: String?) {
                 .into(view)
     }
 }
-
-@BindingAdapter("imageUri")
-fun loadImage(view: ImageView, uri: Uri?) {
-    uri?.let {
-        Glide.with(view.context)
-                .load(it)
-                .into(view)
-    }
-}

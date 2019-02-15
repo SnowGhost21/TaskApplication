@@ -29,6 +29,9 @@ class TaskDetailViewModel(private val repository: TaskRepository,
     val description = taskDetail
             .map { it?.description }
 
+    val title = taskDetail
+            .map { it?.title }
+
 
     class Factory(private val repository: TaskRepository) : ViewModelProvider.Factory {
         private lateinit var taskId: String

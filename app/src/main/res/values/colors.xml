@@ -6,4 +6,5 @@
     <color name="toolbarTitleColor">#FFFFFF</color>
     <color name="cardSubtitleColor">#7f8382</color>
     <color name="titleTextColor">#3e3e3e</color>
+    <color name="primaryDarkColor">#d8d8d8</color>
 </resources>

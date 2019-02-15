@@ -1,5 +1,11 @@
 <resources>
-    <string name="app_name">TaskApplication</string>
-    <string name="home_title">Serviços</string>
-    <string name="error_message">Error at request, try again later</string>
+	<string name="app_name">TaskApplication</string>
+	<string name="home_title">Serviços</string>
+	<string name="error_message">Error at request, try again later</string>
+	<string name="lore_title">Lorem</string>
+	<string name="make_call">Ligar</string>
+	<string name="services">Serviços</string>
+	<string name="address">Endereço</string>
+	<string name="comments">Comentários</string>
+	<string name="favorites">Favoritos</string>
 </resources>
