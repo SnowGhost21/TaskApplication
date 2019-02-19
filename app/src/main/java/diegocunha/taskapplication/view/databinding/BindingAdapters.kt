@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
 
 @BindingAdapter("visibleOrGone")
 fun visibleOrGone(view: View, visible: Boolean) {
@@ -21,6 +22,16 @@ fun loadImage(view: ImageView, url: String?) {
     url?.let {
         Glide.with(view.context)
                 .load(it)
+                .into(view)
+    }
+}
+
+@BindingAdapter("circularImageUrl")
+fun loadCircularImage(view: ImageView, url: String?) {
+    url?.let {
+        Glide.with(view.context)
+                .load(it)
+                .apply(RequestOptions.circleCropTransform())
                 .into(view)
     }
 }

@@ -1,10 +1,9 @@
-package diegocunha.taskapplication.view.task
+package diegocunha.taskapplication.view.comment
 
 import androidx.recyclerview.widget.DiffUtil
-import diegocunha.taskapplication.model.data.Task
-import kotlin.math.sign
+import diegocunha.taskapplication.model.data.TaskComment
 
-class TaskIdDiffCallback(private val oldList: List<String>, private val newList: List<String>): DiffUtil.Callback() {
+class CommentDiffCallback(private val oldList: List<TaskComment>, private val newList: List<TaskComment>) : DiffUtil.Callback() {
 
     override fun areItemsTheSame(oldItemPosition: Int, newItemPosition: Int): Boolean {
         return oldList[oldItemPosition] == newList[newItemPosition]
@@ -22,5 +21,3 @@ class TaskIdDiffCallback(private val oldList: List<String>, private val newList:
         return oldList[oldItemPosition] == newList[newItemPosition]
     }
 }
-
-data class TaskNavigationParams(val taskId: String)

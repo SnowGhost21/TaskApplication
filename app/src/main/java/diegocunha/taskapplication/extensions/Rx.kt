@@ -2,6 +2,7 @@ package diegocunha.taskapplication.extensions
 
 import android.util.Log
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MediatorLiveData
 import io.reactivex.*
 import io.reactivex.disposables.Disposable
 
@@ -15,6 +16,17 @@ fun <T> Single<T>.subscribe(observer: Observer<T>) = this.subscribe({
 }, {
     observer.onError(it)
 })
+
+fun <T, R, S> LiveData<T>.combineWith(other: LiveData<R>, combiner: (T?, R?) -> S?): LiveData<S> {
+    val result = MediatorLiveData<S>()
+    result.addSource(this) {
+        result.postValue(combiner(it, other.value))
+    }
+    result.addSource(other) {
+        result.postValue(combiner(this.value, it))
+    }
+    return result
+}
 
 private class FlowableLiveData<T>(private val flowable: Flowable<T>) : RxLiveData<T>() {
     override fun onActive() {
